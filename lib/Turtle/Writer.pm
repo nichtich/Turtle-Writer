@@ -23,11 +23,15 @@ use warnings;
 =head1 DESCRIPTION
 
 Turtle::Writer is a lightweight helper module for Perl programs that write RDF
-data in RDF/Turtle syntax. For this purpose the module exports four methods:
-C<turtle_statement>, C<turtle_literal>, C<turtle_literal_list>, and
-C<turtle_uri>. This methods may be handy to directly create serialized RDF from
-other forms of structured data.  For a full featured RDF/Trine serializer see
-L<RDF::Trine::Serializer::Turtle>.
+data in Turtle syntax. No non-core packages are required.  Before directly
+writing RDF/Turtle by hand, have a look at this module.  Before using this
+module, have a look at L<RDF::Trine::Serializer::Turtle> which provides a full
+featured serializer for RDF data in Turtle syntax.
+
+By default this module exports four methods: C<turtle_statement>,
+C<turtle_literal>, C<turtle_literal_list>, and C<turtle_uri>. This methods may
+be handy to directly create serialized RDF from other forms of structured data.
+Literal values are escaped and C<undef> is ignored, among other features.
 
 =cut
 
