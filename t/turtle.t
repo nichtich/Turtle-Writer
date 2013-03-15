@@ -33,6 +33,9 @@ foreach ( undef, [ ], "" ) {
 my $ttl = turtle_statement( '<>', 'dc:title' => '"foo"' );
 is( $ttl, "<> dc:title \"foo\" .\n", "turtle_statement" );
 
+$ttl = turtle_statement( undef, 'dc:title' => '"foo"' );
+is( $ttl, "[ dc:title \"foo\" ] .\n", "turtle_statement" );
+
 my $exp = <<'RDF';
 <http://example.org> dc:creator "Terry Winograd", "Fernando Flores" ;
     a <http://purl.org/ontology/bibo/Document> ;

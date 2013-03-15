@@ -68,9 +68,14 @@ sub turtle_statement {
         (defined $o and $o ne '') ? "$p $o" : undef;
     } keys %statements;
 
-    return "" unless @s;
+	return "" unless @s;
 
-    return "$subject " . join(" ;\n" , shift @s, map { "    $_" } @s) . " .\n";
+	my $ttl = join(" ;\n" , shift @s, map { "    $_" } @s); 
+	if (defined $subject) {
+	    return "$subject $ttl .\n";
+	} else {
+	    return "[ $ttl ] .\n";
+	}
 }
 
 =method turtle_literal ( $string [ [ lang => ] $lang | [ type => ] $datatype ] )
