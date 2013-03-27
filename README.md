@@ -3,4 +3,4 @@ without any non-core package dependencies. Before directly writing RDF/Turtle
 by hand, have a look at this module.  Before using this module, have a look at
 [RDF::Trine::Serializer::Turtle](https://metacpan.org/module/RDF::Trine::Serializer::Turtle). 
 
-[![Build Status](https://travis-ci.org/nichtich/RDF-Trine-Serializer-Turtle.png)](https://travis-ci.org/nichtich/RDF-Trine-Serializer-Turtle)
+[![Build Status](https://travis-ci.org/nichtich/Turtle-Writer.png)](https://travis-ci.org/nichtich/Turtle-Writer)
