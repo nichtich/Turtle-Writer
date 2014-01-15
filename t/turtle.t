@@ -1,9 +1,5 @@
-#!perl -T
-
-### Test Turtle serializer functions
-
 use strict;
-use Test::More qw(no_plan);
+use Test::More;
 
 use Turtle::Writer;
 
@@ -56,6 +52,9 @@ my $got = turtle_statement(
       "dc:description" => undef,  # will be ignored
 );
 
-is( join("\n",sort split("\n",$got)), 
-    join("\n",sort split("\n",$exp)), 'full example' );
+$got = [ sort map { $_ =~ s/\.$/;/ } split("\n",$got) ];
+$exp = [ sort map { $_ =~ s/\.$/;/ } split("\n",$exp) ];
 
+is_deeply( $got, $exp, 'full example' );
+
+done_testing;
