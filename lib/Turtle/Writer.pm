@@ -157,4 +157,10 @@ sub turtle_uri {
     return "<$value>";
 }
 
+=head1 SEE ALSO
+
+For a more convenient way to create RDF data, have a look at L<RDF::aREF>. 
+
+=cut
+
 1;
