@@ -164,3 +164,5 @@ For a more convenient way to create RDF data, have a look at L<RDF::aREF>.
 =cut
 
 1;
+
+=encoding utf8
